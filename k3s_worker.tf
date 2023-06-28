@@ -30,7 +30,7 @@ data "template_file" "k3s_worker_data" {
     }
 }
 
-# Define KVM domain to create rker2 agent 
+# Define KVM domain to create k3s agent 
 resource "libvirt_domain" "k3s-worker-qcow2" {
   count  = length(var.k3s_worker_ips)
   name   = "${var.k3s_worker_name}-${count.index}"
