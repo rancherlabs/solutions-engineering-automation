@@ -43,7 +43,7 @@ resource "ssh_resource" "install_add_rke2" {
   commands = [
     "curl -sfL https://get.rke2.io | sudo INSTALL_RKE2_VERSION=${var.rancher_kubernetes_version} sh -",
     "sudo mkdir -p /etc/rancher/rke2",
-    "echo 'server: https://${var.node_public_ip[count.index]}:9345' | sudo tee -a /etc/rancher/rke2/config.yaml",
+    "echo 'server: https://${var.node_public_ip[0]}:9345' | sudo tee -a /etc/rancher/rke2/config.yaml",
     "echo 'token: mysecrettoken' | sudo tee -a /etc/rancher/rke2/config.yaml",
     "echo 'tls-san: ${var.node_public_ip[0]}' | sudo tee -a /etc/rancher/rke2/config.yaml",
     "sudo systemctl enable --now rke2-server.service",
