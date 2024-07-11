@@ -12,26 +12,47 @@
 The configuration uses the following variables:
 
 `rancher_api_url`: The URL of the Rancher server.
+
 `rancher_access_key`: The access key for the Rancher API.
+
 `rancher_secret_key`: The secret key for the Rancher API.
+
 `rancher_insecure`: Boolean to skip TLS verification.
+
 `vsphere_username`: vSphere username.
+
 `vsphere_password`: vSphere password.
+
 `vcenter_server`: vCenter server URL.
+
 `prefix`: Prefix for resource names.
+
 `master_clone_from`: Template for master nodes.
+
 `worker_clone_from`: Template for worker nodes.
+
 `creation_type`: VM creation type.
+
 `datacenter`: vSphere datacenter.
+
 `folder`: vSphere folder.                # folder must be exist
+
 `network`: vSphere network.
+
 `master_cpu_count`: Number of CPUs for master nodes.
+
 `master_memory_size`: Memory size for master nodes.
+
 `worker_cpu_count`: Number of CPUs for worker nodes.
+
 `worker_memory_size`: Memory size for worker nodes.
+
 `kubernetes_version`: Kubernetes version.
+
 `enable_network_policy`: Boolean to enable network policy.
+
 `master_quantity`: Number of master nodes.
+
 `worker_quantity`: Number of worker nodes.
 
 
