@@ -1,0 +1,32 @@
+# Rancher server credentials
+rancher_api_url     = ""
+rancher_access_key  = ""
+rancher_secret_key  = ""
+rancher_insecure    = true
+
+# Vsphere credentials
+vsphere_username    = ""
+vsphere_password    = ""
+vcenter_server      = ""
+
+# Prefix added to names of all resources
+prefix  = "quickstart"
+
+# virtual machine pool information 
+master_clone_from = ""
+worker_clone_from = ""
+datacenter        = ""
+folder            = ""
+vcenter           = ""
+network           = [""]
+creation_type     = ""                    #vm, template, library, legacy
+master_cpu_count  = 2
+worker_cpu_count  = 1
+master_memory_size = 4096
+worker_memory_size = 4096
+
+# DS Cluster configuration
+kubernetes_version  = "v1.24.17+rke2r1"
+enable_network_policy = false
+master_quantity = 2
+worker_quantity = 2
