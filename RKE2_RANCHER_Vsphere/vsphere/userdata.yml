@@ -1,0 +1,14 @@
+#cloud-config
+
+ssh_pwauth: True
+chpasswd:
+  list: |
+     root:linux
+  expire: False
+# users:
+#   - default
+#   - name: <your-user-name>
+#     ssh_authorized_keys:
+#        - <your-ssh-key>
+#     sudo: ALL=(ALL) NOPASSWD:ALL
+#     groups: ['wheel','sudo']   
