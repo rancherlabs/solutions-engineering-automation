@@ -13,9 +13,9 @@ variable "vsphere_env" {
     allow_unverified_ssl = bool         # Whether to allow unverified SSL certificates (useful for self-signed certs)
     num_cpus             = number       # The number of CPUs for the VM
     memory               = number       # The amount of memory (in MB) for the VM
-    ipv4_gateway          = string      # The IPv4 gateway for the VM
-    dns_suffix_list       = list(string)  # The DNS suffix list for the VM
-    dns_server_list       = list(string)  # The DNS server list for the VM
+    # ipv4_gateway          = string      # The IPv4 gateway for the VM
+    # dns_suffix_list       = list(string)  # The DNS suffix list for the VM
+    # dns_server_list       = list(string)  # The DNS server list for the VM
   })
 }
 

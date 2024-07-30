@@ -74,13 +74,13 @@ resource "vsphere_virtual_machine" "vm" {
   clone {
     template_uuid = data.vsphere_virtual_machine.template.id
 
-    customize {
-      linux_options {
-        host_name = "${var.prefix}-rancher-server"
-        domain    = "local"
-      }
+    # customize {
+    #   linux_options {
+    #     host_name = "${var.prefix}-rancher-server"
+    #     domain    = "local"
+    #   }
 
-     }
+    #  }
   }
   extra_config = {
   "guestinfo.userdata"          = base64encode(file("${path.module}/userdata.yml"))
