@@ -3,6 +3,7 @@ apt update -y
 apt install docker* -y
 systemctl enable --now docker.service
 apt install certbot -y
+apt install docker-compose -y
 
 
 # Request Certificate. 
@@ -38,12 +39,6 @@ services:
     command:
       - start-dev
 EOF
-
-
-
-# Install docker compose
-curl -SL https://github.com/docker/compose/releases/download/${docker_compose_version}/docker-compose-linux-x86_64 -o /usr/bin/docker-compose
-chmod +x /usr/bin/docker-compose
 
 # Start Keycloak with Docker Compose
 cd /opt/keycloak
